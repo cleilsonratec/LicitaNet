@@ -19,7 +19,7 @@ public class Produto implements Serializable {
 
 	private static final long serialVersionUID = 4808412127919175587L;
 	private Integer id;
-	private String nome;
+	private String descricao;
 	private String detalhes;
 	private List<Oferta> ofertas;
 
@@ -27,9 +27,8 @@ public class Produto implements Serializable {
 	public Produto() {
 	}
 
-	
-	public Produto(String nome, String detalhes) {
-		this.nome = nome;
+	public Produto(String descricao, String detalhes) {
+		this.descricao = descricao;
 		this.detalhes = detalhes;
 	}
 
@@ -46,12 +45,12 @@ public class Produto implements Serializable {
 	}
 	
 	@Column(name = "nome", nullable = false, length = 200)
-	public String getNome() {
-		return this.nome;
+	public String getDescricao() {
+		return this.descricao;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setDescricao(String nome) {
+		this.descricao = nome;
 	}
 
 	@Column(name = "detalhes", nullable = false, length = 500)
@@ -81,7 +80,7 @@ public class Produto implements Serializable {
 		result = prime * result
 				+ ((detalhes == null) ? 0 : detalhes.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
 		result = prime * result + ((ofertas == null) ? 0 : ofertas.hashCode());
 		return result;
 	}
@@ -106,10 +105,10 @@ public class Produto implements Serializable {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (nome == null) {
-			if (other.nome != null)
+		if (descricao == null) {
+			if (other.descricao != null)
 				return false;
-		} else if (!nome.equals(other.nome))
+		} else if (!descricao.equals(other.descricao))
 			return false;
 		if (ofertas == null) {
 			if (other.ofertas != null)

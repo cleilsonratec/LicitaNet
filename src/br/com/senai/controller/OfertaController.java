@@ -107,7 +107,7 @@ public class OfertaController {
 		
 		produtosItens = new ArrayList<SelectItem>();
 		for (Produto p : produtos) {
-			produtosItens.add(new SelectItem(p.getId(), p.getNome()));
+			produtosItens.add(new SelectItem(p.getId(), p.getDescricao()));
 		}
 		return produtosItens;
 	}

@@ -67,7 +67,7 @@ public class Oferta implements Serializable {
 			setProduto(new Produto());
 		}
 		getProduto().setId(idProduto);
-		getProduto().setNome(nomeProduto);
+		getProduto().setDescricao(nomeProduto);
 
 		setDataInicio(dataInicio);
 		setDataFim(dataFim);
